@@ -154,7 +154,7 @@ Service Account Tokens used in container orchestration systems are vulnerable to
 
 1. Token theft: Tokens can be stolen by attackers who have already gained access to a workload. These attackers can then use these tokens to impersonate the workload and gain access to resources they should not have access to.
 2. Token reuse: Tokens can be reused by attackers to gain access to the system. However, expiration times limited the token reuse time.
-3. Misconfigured service accounts: Similar to misconfigured access to secrets, misconfigured service accounts can lead to applications gaining more privileges then necessary.
+3. Misconfigured service accounts: Similar to misconfigured access to secrets, misconfigured service accounts can lead to applications gaining more privileges then necessary or application receiving service account tokens not intended for them.
 4. Theft of token signing key: The token signing key can be stolen by attackers who have already gained access to the control plane. However, such attackers also have access to all secrets in the container orchestration system. Hence, resulting in the same impact for use of client_id and client_secret compared to using Service Account Tokens.
 
 The following fields are populated in the Service Account Token:
